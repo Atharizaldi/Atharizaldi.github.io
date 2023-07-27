@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ['index.html'],
+  content: ['index.html', './node_modules/flowbite/**/*.js'],
   theme: {
     container: {
       center: true,
@@ -11,7 +11,7 @@ module.exports = {
         primary: '#10b981'
       },
       screens: {
-        '2xl' : '1320px'
+        '2xl': '1320px'
       },
       keyframes: {
         typing: {
@@ -21,7 +21,7 @@ module.exports = {
           },
           "100%": {
             width: "25%"
-          }  
+          }
         },
         typing2: {
           "0%": {
@@ -30,7 +30,7 @@ module.exports = {
           },
           "100%": {
             width: "45%"
-          }  
+          }
         },
         blink: {
           "50%": {
@@ -38,7 +38,7 @@ module.exports = {
           },
           "100%": {
             borderColor: "white"
-          }  
+          }
         }
       }
     },
@@ -47,6 +47,8 @@ module.exports = {
       typinglarge: "typing 3s steps(20) infinite alternate, blink .7s infinite"
     }
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin')
+  ],
 }
 
